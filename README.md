@@ -10,4 +10,4 @@ Editor: Apache NetBeans IDE 15
 
 Database: MySQL Workbench 8.0 CE
 
-# Author: Tehsim Fariha, CSE, IIUC
+# Author: Sahana Akter, CSE, IIUC
