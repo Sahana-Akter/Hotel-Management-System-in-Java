@@ -8,7 +8,7 @@ import java.awt.event.*;
 
 
 public class Reception extends JFrame implements ActionListener {
-    JButton newCustomer,rooms,department,allemployee,managerInfo,customers,searchRoom,update,pickup,logout,checkout,roomStatus;
+    JButton newCustomer,rooms,department,allemployee,managerInfo,customers,searchRoom,update,roomStatus,pickup,checkout,logout;;
     Reception(){
 
         getContentPane(). setBackground(Color.WHITE);
@@ -61,7 +61,7 @@ public class Reception extends JFrame implements ActionListener {
         add(managerInfo);
 
 
-         checkout = new JButton("Checkout");
+        checkout = new JButton("Checkout");
         checkout.setBounds(10, 270, 200, 30);
         checkout.setBackground(Color.BLACK);
         checkout.setForeground(Color.WHITE);
@@ -88,7 +88,7 @@ public class Reception extends JFrame implements ActionListener {
         pickup.setBackground(Color.BLACK);
         pickup.setForeground(Color.WHITE);
         pickup.addActionListener(this);
-        add(pickup);
+        add(pickup);;
 
         searchRoom = new JButton("Search Room");
         searchRoom.setBounds(10, 430, 200, 30);
@@ -99,9 +99,10 @@ public class Reception extends JFrame implements ActionListener {
 
 
         logout = new JButton("Logout");
-        logout.setBounds(10, 310, 200, 30);
+        logout.setBounds(10, 470, 200, 30);
         logout.setBackground(Color.BLACK);
         logout.setForeground(Color.WHITE);
+        logout.addActionListener(this);
         add(logout);
 
 
@@ -122,57 +123,40 @@ public class Reception extends JFrame implements ActionListener {
             setVisible(false);
             new AddCustomer();
 
-        }
-        else if (ae.getSource()== rooms)
-        {
+        } else if (ae.getSource()== rooms) {
             setVisible(false);
             new Room();
 
-        }
-        else if (ae.getSource()== department)
-        {
+        } else if (ae.getSource()== department) {
             setVisible(false);
             new Department();
-        }
-        else if (ae.getSource()== allemployee)
-        {
+        }else if (ae.getSource()== allemployee) {
             setVisible(false);
             new EmployeeInfo();
-        }
-        else if (ae.getSource()== managerInfo)
-        {
+        }else if (ae.getSource()== managerInfo) {
             setVisible(false);
             new ManagerInfo();
-        }
-        else if (ae.getSource()== customers)
-        {
+        }else if (ae.getSource()== customers) {
             setVisible(false);
             new CustomerInfo();
-        }
-        else if (ae.getSource()== searchRoom)
-        {
+        }else if (ae.getSource()== searchRoom) {
             setVisible(false);
             new SearchRoom();
-        }
-        else if(ae.getSource()==update)
-        {
+        }else if (ae.getSource()== update) {
             setVisible(false);
             new UpdateCheck();
-        }
-        else if (ae.getSource()==pickup)
-        {
-            setVisible(false);
-            new Pickup();
-        }
-        else if (ae.getSource()==roomStatus)
-        {
+        }else if (ae.getSource()== roomStatus) {
             setVisible(false);
             new UpdateRoom();
-        }
-        else if (ae.getSource()== checkout)
-        {
+        }else if (ae.getSource()== pickup) {
+            setVisible(false);
+            new Pickup();
+        }else if (ae.getSource()== checkout) {
             setVisible(false);
             new Checkout();
+        }else if (ae.getSource()== logout) {
+            setVisible(false);
+            System.exit(0);
         }
 
     }
