@@ -43,8 +43,6 @@ insert into department values('Kitchen or Food Production', '540000');
 insert into department values('Security', '320000');
 select * from department;
 
-UPDATE room
-SET availability = 'Available'
-WHERE roomnumber=101;
+
 
 
